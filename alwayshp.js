@@ -129,7 +129,7 @@ getBarAttribute(barName, {alternative}={}) {
                 const tmp = parseInt(resource.temp) || 0;
                 dt = amount > 0 ? Math.min(tmp, amount) : 0;
                 // Remaining goes to health
-                tmpMax = parseInt(hp.tempmax) || 0;
+                tmpMax = parseInt(tmp) || 0;
 
                 updates["data." + resourcename + ".temp"] = tmp - dt;
             }
